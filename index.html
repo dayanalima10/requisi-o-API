@@ -7,10 +7,18 @@
 </head>
 <body>
     <h1>Requisição e resposta  via API</h1>
-    <div id = "resposta"></div>
-     
+    <!-- <div id = "resposta"></div> -->
+    <div class="minhaClasseDiv">
+        <P>
+            <span></span>
+        </P>
+
+    </div>
+
+     <button type="button" id="botao">Botão</button>
+
     <script> 
-        const requisicao = new Request('http://localhost:3000/produtos');
+        /*const requisicao = new Request('http://localhost:3000/produtos');
 
         fetch(requisicao)
         .then(resposta => resposta.json())
@@ -25,7 +33,13 @@
                  document.querySelector(`#resposta`).appendChild(ul).innerHTML = linha;
             
             }        
-        });
+        });*/
+
+        document.querySelector('[type=button]').addEventListener('click', () => {
+            document.querySelector('.minhaClasseDiv > p').innerHTML = "Texto Anterior";
+    }
+        );
+
     </script>
 
 </body>
