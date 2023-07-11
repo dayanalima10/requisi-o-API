@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interaçoes com APIs Create com POST</title>
+    <title>Interaçoes com APIs Update com PUT</title>
 </head>
 <body>
 
     <header>
         <a href="./">Home</a>
-        <h1> Create com POST</h1>
+        <h1>  Update com PUT</h1>
     </header>
         <form action="" method="post">
             <label for="id:">ID</label>
-            <input type="text" id = "id" disabled>
+            <input type="text" id = "id">
 
             <label for="descricao:">Descrição</label>
             <input type="text" id = "descricao">
@@ -21,7 +21,7 @@
             <label for="preco:">Preço</label>
             <input type="text" id = "preco">
 
-            <button type ="button" id="btCadastrar">Cadastrar</button>
+            <button type ="button" id="btAtualizar">Atualizar</button>
 
 
         </form>
@@ -30,7 +30,7 @@
     </div>
     <script>
 
-        document.querySelector('#btCadastrar').addEventListener('click', () => {
+        document.querySelector('#btAtualizar').addEventListener('click', () => {
             
             const dados = {
                 'id': null,
@@ -38,8 +38,11 @@
                 'preco': document.querySelector('#preco').value
             }
 
-            fetch('http://localhost:3002/produtos', {
-                method :'POST',
+            const id = document.querySelector('#id').value;
+            
+
+            fetch(`http://localhost:3002/produtos/${id}`, {
+                method :'PUT',
                 headers: {
                     'Content-type': 'application/json'
                 },
@@ -47,7 +50,8 @@
             })
             .then(resposta => {
                 if(resposta.ok) {
-                    alert('Produto cadastrado');
+                    alert('Produto Atualizado');
+                    location.reload();
                 }
             });
 
