@@ -1,18 +1,61 @@
-.produto{
+.produto {
     display: flex;
     justify-content: space-between;
-    align-items:  center;
-    flex-direction:  row;
+    align-items: center;
+    flex-direction: row;
     list-style: none;
-    font-family: 'Roboto', sans-serif;
-    color: blue;
+    font-family: roboto slab, serif;
+    border-bottom: 1px solid black;
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
 }
-.delete-button{
-    background-color:red;
+
+.produto:nth-child(even) {
+    background: #fff1c1;
+
+
+}
+
+;
+
+.produto:nth-child(odd) {
+    background: white;
+}
+
+;
+
+.delete-button {
+    background-color: red;
     font-size: 10pt;
     border-radius: 40%;
     color: aliceblue;
     font-weight: bold;
-    
+
+}
+
+#formulario {
+display:flex;
+width: 420px;
+height: 439px;
+flex-shrink: 0;
+flex-direction: column;
+
+
+}
+
+#btAtualizar {
+    color: #FFF;
+    text-align: center;
+    font-family: ubuntu;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    width: 303px;
+    height: 46px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background-color: 48A4FA;
 
 }

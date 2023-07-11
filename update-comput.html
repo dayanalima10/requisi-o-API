@@ -11,6 +11,8 @@
         <a href="./">Home</a>
         <h1>  Update com PUT</h1>
     </header>
+    <script src="./scripts/estilos.js"></script>
+
         <form action="" method="post">
             <label for="id:">ID</label>
             <input type="text" id = "id">
@@ -21,7 +23,7 @@
             <label for="preco:">Preço</label>
             <input type="text" id = "preco">
 
-            <button type ="button" id="btAtualizar">Atualizar</button>
+            <button type ="button" id="btAtualizar">Cadastrar</button>
 
 
         </form>
@@ -72,7 +74,9 @@
                 for(let i = 0;i < resposta.length; i++){
 
                     const ul = document.createElement('ul');
+                    ul.classList.add('produto')
 
+            
                     ul.appendChild(document.createElement('li')).
                     innerHTML = resposta[i].id;
                     ul.appendChild(document.createElement('li')).

@@ -1,6 +1,6 @@
 const styles = document.createElement('link');
 styles.setAttribute('rel','stylesheet');
-styles.setAttribute('href','./assets/styles/style.css');
+styles.setAttribute('href','./styles/style.css');
 styles.setAttribute('type','text/css');
 
     // <link rel = "stylesheet" href = "./assets/style/styles.css">
@@ -22,4 +22,4 @@ link3.href = "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
 
     
 document.head.appendChild(styles);
-document.head.append(ink1,link2,link3)
+document.head.append(link1,link2,link3)
