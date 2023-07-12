@@ -36,26 +36,140 @@
 }
 
 #formulario {
-display:flex;
-width: 420px;
-height: 439px;
-flex-shrink: 0;
-flex-direction: column;
+    display: flex;
+    width: 420px;
+    height: 439px;
+    flex-shrink: 0;
+    flex-direction: column;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 25px;
+    border: 2px solid;
 
 
 }
 
 #btAtualizar {
-    color: #FFF;
+    color: #ffffff;
     text-align: center;
     font-family: ubuntu;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
-    width: 303px;
+    width: 118px;
     height: 46px;
     flex-shrink: 0;
     border-radius: 4px;
-    background-color: 48A4FA;
+    background-color: #48A4FA
 
 }
+
+#btCancelar {
+    border-radius: 4px;
+    background: #F59999;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 118px;
+    height: 46px;
+    flex-shrink: 0;
+    color: #FFF;
+    text-align: center;
+    font-family: ubuntu;
+    font-size: 24px;
+    font-style: normal;
+    display: flex;
+}
+
+
+#fieldset {
+    border-radius: 12px;
+    background: #FFF;
+    box-shadow: 4px 4px 4px 0px rgba(168, 15, 161, 0.25);
+}
+
+#layout {
+    width: 1440px;
+    height: 1024px;
+    background: #FEFFE4;
+    padding: 50px;
+}
+
+#preco,
+#id,
+#descricao {
+    color: #9a9a9a;
+    font-family: Ubuntu;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400px;
+    line-height: normal;
+}   
+#botao {
+    display: flex;
+justify-content: space-evenly;
+    
+}
+
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.titulo {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
