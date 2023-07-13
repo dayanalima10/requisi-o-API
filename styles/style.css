@@ -10,6 +10,8 @@
     font-size: 16px;
     font-weight: 400;
     line-height: normal;
+    margin: 0;
+    padding: 10px;
 }
 
 .produto:nth-child(even) {
@@ -37,30 +39,34 @@
 
 #formulario {
     display: flex;
-    width: 420px;
-    height: 439px;
     flex-shrink: 0;
     flex-direction: column;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    padding: 25px;
-    border: 2px solid;
+    padding: 20px;
+    border-radius: 12px;
 
+}
+#formulario input{
+    width: 350px;
+    height: 30;
 
 }
 
 #btAtualizar {
-    color: #ffffff;
+    color: #FFF;
     text-align: center;
-    font-family: ubuntu;
+    font-family: Ubuntu;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
-    width: 118px;
+    width: 167px;
     height: 46px;
     flex-shrink: 0;
     border-radius: 4px;
-    background-color: #48A4FA
-
+    background-color: #48A4FA;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border: none;
+    cursor: pointer;
 }
 
 #btCancelar {
@@ -76,6 +82,7 @@
     font-size: 24px;
     font-style: normal;
     display: flex;
+    border: none;
 }
 
 
