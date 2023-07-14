@@ -21,7 +21,8 @@
         <form id="formulario" method="post">
             <h2 class="titulo"> Alteração de Produtos</h2>
 
-            <label for="id:">ID</label>
+            <div class="labelInput">
+                 <label for="id:">ID</label>
             <input type="text" id="id" placeholder="digite o ID do produto">
 
             <label for="descricao:">Descrição</label>
@@ -29,6 +30,9 @@
 
             <label for="preco:">Preço</label>
             <input type="text" id="preco" placeholder="digite preco do produto">
+            </div>
+
+           
 
             <div id="botao">
                 <button type="button" id="btAtualizar">Atualizar</button>
@@ -43,6 +47,22 @@
         <h2>Lista de produtos</h2>
     </div>
     <script>
+
+        //Desafio 1
+        document.querySelector('#listaProdutos').addEventListener('click', event => {
+            //console.Log(event.target);
+            if(event.target.closest('ul').classList.contains('produto')) {
+                // console.Log (event.target);
+                const elementoBase = event.target.closest('ul');
+
+                documentt.querySelector('input#id').value = elementoBase.querySelector('[data-produto="id"]').innerHTML;
+
+                documentt.querySelector('input#descricao').value = elementoBase.querySelector('[data-produto="descricao"]').innerHTML;
+
+                documentt.querySelector('input#preco').value = elementoBase.querySelector('[data-produto="preco"]').innerHTML;
+                
+            }
+        });
 
         document.querySelector('#btAtualizar').addEventListener('click', () => {
 
@@ -86,20 +106,26 @@
                 for (let i = 0; i < resposta.length; i++) {
 
                     const ul = document.createElement('ul');
-                    ul.classList.add('produto')
+                    ul.id = resposta[i].id;
+                    ul.classList.add('produto');
 
+                    const liId = document.createElement('li');
+                    liId.setAttribute('data-produto', 'id');
+                    liId.innerHTML = resposta[i].id;
+                    liId.classList.add('produto-id');
 
-                    ul.appendChild(document.createElement('li')).
-                        innerHTML = resposta[i].id;
-                    ul.appendChild(document.createElement('li')).
-                        innerHTML = resposta[i].descricao;
-                    ul.appendChild(document.createElement('li')).
-                        innerHTML = resposta[i].preco;
+                    const liDescricao = document.createElement('li');
+                    liDescricao.setAttribute('data-produto', 'descricao')
+                    liDescricao.innerHTML = resposta[i].descricao;
 
+                    const liPreco = document.createElement('li');
+                    liPreco.setAttribute('data-produto', 'preco')
+                    liPreco.innerHTML = resposta[i].preco;
 
-                    document.querySelector('#listaProdutos').appendChild
-                        (ul);
-                }
+                    ul.append(liId, liDescricao, liPreco);
+                    document.querySelector('#listaProdutos').append(ul);
+
+               };
             })
 
 
