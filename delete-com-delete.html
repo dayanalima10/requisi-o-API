@@ -17,24 +17,26 @@
 
     </div>
     <script src="./scripts/estilos.js"></script>
+    <script type="module" src="./scripts/delete-com-delete.js"></script>
+
     <script>
 
-        document.addEventListener('click', () => {
-            if (event.target.classList.contains('delete-button')){
-                fetch('http://localhost:3002/produtos/$(event.target.value}', {
-                    method: 'DELETE',
-                    headers: {
-                        'Content-type': 'application/json'
-                    }
-                })
-                        .then(resposta => {
-                            if (respósta.ok){
-                                alert('Produto apagado!');
-                                location.reload();
-                            }
-                        })
-                    }
-                });
+        // document.addEventListener('click', () => {
+        //     if (event.target.classList.contains('delete-button')){
+        //         fetch(´http://localhost:3002/produtos/$(event.target.value}´, {
+        //             method: 'DELETE',
+        //             headers: {
+        //                 'Content-type': 'application/json'
+        //             }
+        //         })
+        //                 .then(resposta => {
+        //                     if (respósta.ok){
+        //                         alert('Produto apagado!');
+        //                         location.reload();
+        //                     }
+        //                 })
+        //             }
+        //         });
 
 
                     fetch('http://localhost:3002/produtos', {
